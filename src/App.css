@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* font-size */
+  --fs-sm: 12px;
+  --fs-sm1: 14px;
+  --fs-md: 16px;
+  --fs-md1: 24px;
+  --fs-lg: 36px;
+  --fs-lg1: 36px;
+  --fs-xl: 64px;
+
+  /* colors */
+  --text-grey: #666666;
+  --text-skyblue: #2C49FE;
+  --text-lightblue: #01C8FE;
+  --text-lightgrey: #CCCCCC;
+  --text_black: #000000;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* font-size */
+.fs-sm {
+  font-size: var(--fs-sm);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fs-sm1 {
+  font-size: var(--fs-sm1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fs-md {
+  font-size: var(--fs-md) !important;
+}
+
+.fs-md1 {
+  font-size: var(--fs-md1);
+}
+
+.fs-lg {
+  font-size: var(--fs-lg);
+}
+
+.fs-lg1 {
+  font-size: var(--fs-lg1);
+}
+
+.fs-xl {
+  font-size: var(--fs-xl);
+}
+
+/* colors */
+.text-grey {
+  color: var(--text-grey);
+}
+.bg_black {
+  background-color: var(--text_black);
+}
+
+.text-lightgrey {
+  color: var(--text-lightgrey);
+}
+
+.text-skyblue {
+  color: var(--text-skyblue);
+}
+
+.text-lightblue {
+  color: var(--text-lightblue);
+}
+
+.bg-skyblue {
+  background-color: var(--text-skyblue) !important;
+}
+
+/* line-height */
+.lh-135 {
+  line-height: 135%;
+}
+
+.lh-150 {
+  line-height: 150% !important;
+}
+
+.ff-poppins {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none !important;
+  box-sizing: border-box;  
+}
+
+
+/* hero */
+
+.bg-img{
+  background-image: url(../src/assets/image/bg-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 372px;
+}
+
+/* cards */
+.sec-btn {
+  border-radius: 23px !important;
+  display: inline-flex;
+  padding: 11px 28px !important;
+  align-items: flex-start;
+}
+
+.sec-cards {
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  transition: .3s;
+}
+.sec-cards:hover{
+  box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.10);
+
+}
+.blue-line::before {
+  content: '';
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 166px;
+  height: 8px;
+  flex-shrink: 0;
+  background-color: var(--text-skyblue);
+  position: absolute;
+  top: 0;
+  left: 20%;
+  z-index: 2;
+}
+
+.blue-line::after {
+  content: '';
+  display: flex;
+  width: 188px;
+  height: 8px;
+  flex-shrink: 0;
+  background-color: var(--text-lightblue);
+  position: absolute;
+  top: 0;
+  left: 22%;
+  z-index: 1;
+}
+ul {
+  padding-left: unset !important;
+}
+
+/* footer */
+.background-blue {
+  /*background-image: url(/assets/images/back.png);*/
+  background: rgba(45, 60, 174, 0.53) !important;
+  height: 62px;
+
+}
+.mw-300{
+  max-width: 300px;
+}
+
+.f-showmore {
+  width: 100%;
+  height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  display: flex;
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 150%
 }
 
-.App-link {
-  color: #61dafb;
+
+@media (max-width:992px) {
+  label[for="icon"] {
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      position: fixed;
+      z-index: 5;
+  }
+
+  label[for="icon"]>span {
+      width: 100%;
+      height: 5px;
+      background-color: var(--text-lightblue);
+      border-radius: 2px;
+      z-index: 5;
+  }
+
+  div.phone-view {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100%;
+      background-color: rgb(8, 16, 164);
+      position: fixed;
+      top: 0;
+      right: -100%;
+      transition: all 500ms linear;
+      z-index: 4;
+  }
+
+  input[type="checkbox"]:checked~.phone-view {
+      right: 0;
+  }
+
+  .icon {
+      z-index: 5 !important;
+      position: absolute !important;
+      right: 20px;
+      top: 47px;
+      
+  }
+  .flex-direction-col {
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+@media(min-width:992px) { 
+
+  .p-showmore {
+    width: 100%;
+    height: 1005;
+      padding: 13px 24px 13px 23px;
+      color: #FFF;
+      text-align: center;
+      font-size: 12px;
+      font-family: poppins;
+      font-weight: 700px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .background-blue {
+      background: rgba(45, 60, 174, 0.53) !important;
   }
+
+
+}
+
+@media (min-width:768px) {
+  :root {
+    /* font-size */
+    --fs-sm: 12px;
+    --fs-sm1: 14px;
+    --fs-md: 16px;
+    --fs-md1: 24px;
+    --fs-lg: 36px;
+    --fs-lg1: 48px;
+    --fs-xl: 64px;
+}
+.blue-line::before {
+  content: '';
+  display: flex;
+  width: 166px;
+  height: 8px;
+  flex-shrink: 0;
+  background-color: var(--text-skyblue);
+  position: absolute;
+  top: 0;
+  left: 40%;
+  z-index: 2;
+}
+
+.blue-line::after {
+  content: '';
+  display: flex;
+  width: 188px;
+  height: 8px;
+  flex-shrink: 0;
+  background-color: var(--text-lightblue);
+  position: absolute;
+  top: 0;
+  left: 40%;
+  z-index: 1;
+}
 }
