@@ -71,6 +71,9 @@
 .bg-skyblue {
   background-color: var(--text-skyblue) !important;
 }
+.w-logo{
+  width: 50px;
+}
 
 /* line-height */
 .lh-135 {
@@ -282,5 +285,8 @@ ul {
   top: 0;
   left: 40%;
   z-index: 1;
+}
+.w-logo{
+  width: unset;
 }
 }

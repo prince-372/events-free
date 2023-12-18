@@ -8,7 +8,7 @@ const Herosec = () => {
         <Container>
             <nav className="d-flex justify-content-between py-4">
                 <div className="pt-17 d-flex align-items-center">
-                    <img src={pagelogo} alt="events free"/>
+                    <img className='w-logo' src={pagelogo} alt="events free"/>
                     <p className="fs-lg1 fw-bold lh-135 ff-poppins text-skyblue m-0 lh-135">Events </p>
                     <p className="fs-lg1 fw-bold lh-135 ff-poppins text-lightblue m-0 lh-135">Free</p>
                 </div>
