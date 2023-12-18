@@ -21,16 +21,16 @@ const Herosec = () => {
                <div className=" d-flex align-item-center mb-0 phone-view gap-5">
                     <ul className="gap-5 d-flex flex-direction-col align-items-center m-0 p-0">
                         <li className="">
-                            <a href="" className="fs-md fw-normal ff-poppins text-white">HOME</a>
+                            <a href="" className="fs-md fw-normal ff-poppins text-white font">HOME</a>
                         </li>
                         <li className="">
-                            <a href="" className="fs-md fw-normal ff-poppins text-white">EVENTS</a>
+                            <a href="" className="fs-md fw-normal ff-poppins text-white font">EVENTS</a>
                             </li>
                         <li className="">
-                            <a href="" className="fs-md fw-normal ff-poppins text-white">FEED</a>
+                            <a href="" className="fs-md fw-normal ff-poppins text-white font">FEED</a>
                         </li>
                         <li className="">
-                            <a href="" className="fs-md fw-normal ff-poppins text-white">USER NAME</a>
+                            <a href="" className="fs-md fw-normal ff-poppins text-white font">USER NAME</a>
                         </li>
                     </ul>
                     <div className='d-flex align-items-center'>

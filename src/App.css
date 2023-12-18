@@ -113,6 +113,12 @@
   display: inline-flex;
   padding: 11px 28px !important;
   align-items: flex-start;
+  transition: .4s;
+}
+.sec-btn:hover {
+ background-color: transparent;
+ color: var(--text-skyblue);
+ outline: 1px solid var(--text-skyblue);
 }
 
 .sec-cards {
@@ -150,6 +156,12 @@
 }
 ul {
   padding-left: unset !important;
+}
+.font{
+  transition: .4s;
+}
+.font:hover{
+  -webkit-text-stroke: 1px white !important;
 }
 
 /* footer */
